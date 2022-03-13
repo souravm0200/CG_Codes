@@ -5,19 +5,36 @@ void display(){
     glClearColor(0,0,1,1);
     glClear(GL_COLOR_BUFFER_BIT);
 
-    glPointSize(10);
-    glBegin(GL_POINTS);
-    glColor3f(1,0,0);
-    glVertex2f(0,0);
-    glEnd();
 
 
-    glLineWidth(7);
-    glBegin(GL_LINES);
-    glColor3f(1,0,0);
-    glVertex2f(0.1,0);
-    glVertex2f(0.5,0);
-    glEnd();
+	glBegin(GL_QUADS);              // Each set of 4 vertices form a quad
+	glColor3f(1.0f, 0.0f, 0.0f); // Red
+
+	glVertex2f(0.0f, 0.0f);    // x, y
+	glVertex2f(0.5f, 0.0f);    // x, y
+
+	glVertex2f(0.5f, 0.5f);    // x, y
+	glVertex2f(0.0f, 0.5f);    // x, y
+	glEnd();
+
+	glBegin(GL_POLYGON);            // These vertices form a closed polygon
+	glColor3f(1.0f, 1.0f, 0.0f); // Yellow
+	glVertex2f(0.4f, 0.2f);
+	glVertex2f(0.6f, 0.2f);
+	glVertex2f(0.7f, 0.4f);
+	glVertex2f(0.6f, 0.6f);
+	glVertex2f(0.4f, 0.6f);
+	glVertex2f(0.3f, 0.4f);
+	glEnd();
+
+	glBegin(GL_TRIANGLES);//
+    glColor3ub(232, 133, 20);//rgb color picker
+
+    glVertex2f(+.5f, -.8f);    // x, y
+	glVertex2f(+0.7f,-.8f);
+	glVertex2f(+.6f, -0.4f);
+	glEnd();
+
 
 
     glFlush();
