@@ -1,5 +1,8 @@
-#include <stdio.h>
+
 #include <GL/glut.h>
+#include <GL/gl.h>
+
+#include<bits/stdc++.h>
 
 void myDisplay(void)
 {
@@ -22,7 +25,7 @@ glColor3f(0.0f, 0.0f, 0.0f);
 glPointSize(4.0);
 glMatrixMode(GL_PROJECTION);
 glLoadIdentity();
-gluOrtho2D(0.0, 640.0, 0.0, 480.0);
+gluOrtho2D(0.0, 1200.0, 0.0, 600.0);
 }
 
 int main(int argc, char** argv)
